@@ -8,19 +8,22 @@
     <script src="prime.js"></script>
 
 </head>
-<body style="margin:10% 25% ;">
+<body style="margin:10% 25% ;padding: 5%;">
     <h1>Know The Prime Numbers</h1>
-    <input type="text" name="num" id="num" placeholder="Enter Your Range">
+    <!-- <input type="text" name="num" id="num" placeholder="Enter Your Range"> -->
     <script>
-        function handleNum(){
-            let a =parseInt( document.getElementById("num").value);
-            let res = prime(a);
-            document.getElementById("result").innerHTML="Prime Numbers from 2 to "+a+" is / are : <br>"+res;
+        const handleNum= ()=>{
+            let a = 30
+            let res = new Array(prime())    
+            document.getElementById("result").innerHTML="1st 10 Prime Numbers are : <br>"
+            document.getElementById("res").innerHTML=res
+
         }
     </script>
     <input type="button" value="Show Prime" onclick="handleNum()">
 
     <h1 id="result"></h1>
+    <p id="res"></p>
 
 </body>
 </html>

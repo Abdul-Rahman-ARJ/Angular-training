@@ -1,12 +1,15 @@
-function prime(a:number) {
+function prime() {
   let i:number;
   let p:any=new Array();
-  for (i = 2; i <= a; i++) {
+  for (i = 2; true; i++) {
     if(isPrime(i)){
         p.push(i);
+        if(p.length === 10){
+          return p
+        }
     }
   }
-  return p
+  return 
 }
 
 function isPrime(num) {
