@@ -1,13 +1,12 @@
-function prime() {
-  let a = 10;
-  let i=0;
-  let p =new  Array();
+function prime(a:number) {
+  let i:number;
+  let p:any=new Array();
   for (i = 2; i <= a; i++) {
     if(isPrime(i)){
         p.push(i);
     }
   }
-  alert("Prime Numbers From 2 to 10 are : "+p) 
+  return p
 }
 
 function isPrime(num) {

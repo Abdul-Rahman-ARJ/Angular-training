@@ -6,9 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prime Numbers</title>
     <script src="prime.js"></script>
+
 </head>
 <body style="margin:10% 25% ;">
-    <input type="button" value="Show Prime" onclick="prime()">
+    <h1>Know The Prime Numbers</h1>
+    <input type="text" name="num" id="num" placeholder="Enter Your Range">
+    <script>
+        function handleNum(){
+            let a =parseInt( document.getElementById("num").value);
+            let res = prime(a);
+            document.getElementById("result").innerHTML="Prime Numbers from 2 to "+a+" is / are : <br>"+res;
+        }
+    </script>
+    <input type="button" value="Show Prime" onclick="handleNum()">
+
+    <h1 id="result"></h1>
 
 </body>
 </html>
